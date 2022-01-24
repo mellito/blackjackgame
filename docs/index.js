@@ -86,18 +86,19 @@ function newCard() {
 function newCardPc() {
   let sumHuman = sumArray(humanArray);
   let sumpc = sumArray(pcArray);
-
   pcCardContainer.innerHTML = "";
   pcArray.map((index) => {
     pcCardContainer.innerHTML += "<span>" + "<p>" + index + "</p>" + "</span>";
   });
-
   while (sumpc < 21 && sumHuman >= sumpc) {
     let pluscard = getRndInteger(2, 11);
     pcArray.push(pluscard);
     sumpc = sumArray(pcArray);
-    pcCardContainer.innerHTML +=
-      "<span>" + "<p>" + pcArray[humanArray.length - 1] + "</p>" + "</span>";
+    pcCardContainer.innerHTML = "";
+    pcArray.map((index) => {
+      pcCardContainer.innerHTML +=
+        "<span>" + "<p>" + index + "</p>" + "</span>";
+    });
   }
 
   pcHumanEl.textContent = `Pc card sum is : ${sumpc}`;

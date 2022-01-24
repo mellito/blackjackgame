@@ -26,22 +26,23 @@ h1 {
 }
 
 main {
-  height: 60vh;
+  height: 70vh;
   width: 60vw;
 }
 
 /* !MAIN TOP*/
 .main-top {
-  height: 20%;
+  height: auto;
   width: 100%;
 }
 
 /* !MAIN MID*/
 .main-mid {
-  height: 60%;
+  height: auto;
   width: 100%;
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
 }
 .main-mid > section {
   width: 100%;
@@ -51,6 +52,7 @@ main {
 .main-mid section p:nth-child(1) {
   font-size: 15px;
   color: white;
+  padding-top: 5px;
 }
 .main-mid section p:nth-child(2) {
   font-size: 15px;
@@ -78,7 +80,7 @@ main {
 
 /* !MAIN MAIN BOTTON*/
 .main-botton {
-  height: 20%;
+  height: auto;
   width: 100%;
   padding-top: 10px;
 }
@@ -92,6 +94,10 @@ main {
   font-size: 20px;
   padding: 5px 0;
   font-weight: bold;
+}
+
+#winner-el {
+  padding-top: 10px;
 }
 
 #stand {
